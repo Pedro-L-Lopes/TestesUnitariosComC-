@@ -24,5 +24,14 @@ namespace Calculadora.Services
         {
             return x / y;
         }
+
+        public bool VerificarSeEPar(int x)
+        {
+            return x % 2 == 0;
+        }
+        public bool VerificarSeEImpar(int x)
+        {
+            return x % 2 == 1;
+        }
     }
 }

@@ -43,5 +43,20 @@ namespace CalculadoraTeste
         {
             Assert.Equal(1, _calc.Dividir(10, 10));
         }
+
+        [Fact]
+        public void RetornarVerdadeiroSeONumeroForPar()
+        {
+            Assert.True(_calc.VerificarSeEPar(2));
+        }
+
+        // Realizar mais de um teste no mesmo metodo
+        [Theory]
+        [InlineData(new int[] {1, 3})]
+        [InlineData(new int[] {5, 7, 9})]
+        public void RetornarVerdadeiroSeONumeroForImpar(int[] numeros)
+        {
+            Assert.All(numeros, num => Assert.True(_calc.VerificarSeEImpar(num)));
+        }
     }
 }
